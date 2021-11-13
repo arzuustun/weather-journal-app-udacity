@@ -32,8 +32,7 @@ function listening(){
 // TODO-ROUTES!
 app.get("/all",getData);
 
-function getData(req,res)
-{
+function getData(req,res){
   res.send(projectData);
 }
 
@@ -44,7 +43,9 @@ function addData (req,res){
    newEntry = {
        temp:newData.temp,
        date:newData.date,
-       feeling:newData.feeling
+       feeling:newData.feeling,
+       weatherMain:newData.weatherMain,
+       weatherImg:newData.weatherImg
    }
    projectData=newEntry;
     console.log("NEW ENTRY",newEntry);
